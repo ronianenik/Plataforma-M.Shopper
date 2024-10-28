@@ -1,0 +1,114 @@
+/* Estilo do container do formulário */
+.create-form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 50%; /* Ajuste a largura conforme necessário */
+    margin-top: 20px;
+    text-align: left; /* Alinha o conteúdo à esquerda */
+}
+
+.form-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 80%;
+        text-align: left;
+}
+
+.form-group input,
+.form-group select {
+    width: 90%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.submit-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Alinhamento para Botões de Seleção */
+.form-group .radio-group,
+.form-group .checkbox-group {
+    display: flex;
+    flex-direction: row; /* Organiza os botões de seleção em linha */
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+.form-group .radio-group label,
+.form-group .checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    gap: 5px; /* Espaço entre o botão de seleção e o texto */
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos básicos para o formulário */
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    width: 400px;
+}
+.form-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.divider {
+    height: 2px;
+    background-color: #ccc;
+    margin: 10px 0;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background-color: #218838;
+}
+.show-form-btn {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.show-form-btn:hover {
+    background-color: #0056b3;
+}
+

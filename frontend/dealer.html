@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Administrador</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Caminho para o arquivo CSS -->
+</head>
+<body>
+    <!-- Header superior -->
+    <div class="header">
+        <img src="https://i.ibb.co/DDDsTh2/Logo.png" alt="Logo" class="logo">
+        <div class="button-group">
+            <button class="back-button" onclick="toggleFilterBar()">Voltar</button>
+            <button class="logout-button">Sair</button>
+        </div>
+    </div>
+
+    <!-- Barra de navegação com botões de filtro -->
+    <div class="filter-bar" id="filter-bar">
+        <button onclick="showSection('vendas')" id="vendas-btn">Vendas</button>
+        <button onclick="showSection('pos-vendas')" id="pos-vendas-btn">Pós Vendas</button>
+        <button onclick="showSection('powerbi')" id="powerbi-btn">Power BI</button>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.filter-bar button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(sectionId + '-btn').classList.add('active');
+            document.querySelectorAll('.form-section').forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            document.getElementById('filter-bar').classList.add('hidden');
+        }
+
+        function toggleFilterBar() {
+            const filterBar = document.getElementById('filter-bar');
+            filterBar.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

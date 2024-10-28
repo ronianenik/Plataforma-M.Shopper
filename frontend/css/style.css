@@ -1,0 +1,238 @@
+/* Estilo geral do corpo */
+body {
+    background-color: #A9A9A9;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Estilo do header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D3D3D3;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.header .logo {
+    width: 50px;
+}
+.header .button-group {
+    display: flex;
+    gap: 10px;
+}
+.header .button-group button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+.header .button-group .back-button {
+    background-color: #D3D3D3;
+    color: #333;
+}
+.header .button-group .logout-button {
+    background-color: #FF0000;
+    color: #fff;
+}
+/* Barra de navegação para os filtros */
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+/* Alinhar os botões à esquerda */
+.filter-bar button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #D3D3D3;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+/* Efeito de seleção */
+.filter-bar button.active {
+    background-color: #A9A9A9;
+}
+/* Oculta a barra de navegação */
+.filter-bar.hidden {
+    display: none;
+}
+/* Linha separadora */
+.separator {
+    height: 2px;
+    background-color: #D3D3D3;
+    margin-top: 10px;
+}
+/* Área de conteúdo */
+.content-area {
+    padding: 20px;
+    background-color: #fff;
+}
+/* Estilo para cada formulário */
+.form-section {
+    display: none;
+}
+.form-section.active {
+    display: block;
+}
+/* Estilo para botões secundários */
+.form-section button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #D3D3D3;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+ /* Estilo para a logo centralizada */
+ .logo-container {
+    position: absolute; /* Faz a logo flutuar sobre o fundo */
+    opacity: 0.1; /* 50% de transparência */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para que a logo fique perfeitamente centralizada */
+    
+    /*display: none; /* Inicialmente oculta a logo */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #eaeaea;
+}
+
+.filter-bar button {
+    padding: 10px;
+    flex: 1;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.content-area {
+    padding: 20px;
+}
+
+.form-section {
+    display: none; /* Oculta as seções por padrão */
+}
+
+.form-section.active {
+    display: block; /* Mostra a seção ativa */
+}
+
+.logo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.review-container {
+    display: none; /* Oculta o container do review por padrão */
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) 
+    {
+    .header, .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .filter-bar button {
+        width: 100%; /* Botões ocupam 100% da largura */
+    }
+
+    .logo {
+        max-width: 80px;
+    }
+
+    .content-area {
+        padding: 10px;
+    }
+}
+
+/* Estilo para o container do formulário de criação de usuário */
+#create-user-form-container {
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    border: 1px solid #ccc; /* Borda leve */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 20px; /* Espaço acima do formulário */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve para dar profundidade */
+}
+
+/* Estilo para os rótulos do formulário */
+#create-user-form-container label {
+    display: block; /* Rótulos em blocos para ocuparem toda a largura */
+    margin-bottom: 5px; /* Espaço abaixo do rótulo */
+    font-weight: bold; /* Negrito */
+}
+
+/* Estilo para os campos de entrada */
+#create-user-form-container input,
+#create-user-form-container select {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaço abaixo dos campos */
+    border: 1px solid #ccc; /* Borda leve */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo para o botão de salvar */
+#create-user-form-container button[type="submit"] {
+    background-color: #28a745; /* Cor de fundo verde */
+    color: white; /* Cor do texto branca */
+    padding: 10px 15px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor pointer ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+/* Estilo para o botão ao passar o mouse */
+#create-user-form-container button[type="submit"]:hover {
+    background-color: #218838
+}; /* Cor de fundo mais escura ao passar o mouse */
+

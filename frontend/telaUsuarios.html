@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários</title>
+    <link rel="stylesheet" href="css/styleUsuarios.css"> <!-- Caminho para o arquivo CSS -->
+</head>
+<body>
+    <div style="background-color: #A9A9A9; height: 100vh; display: flex; justify-content: center; align-items: center;">
+        <div class="user-table-container">
+            <div class="table-header">Lista de Usuários</div>
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Tipo de Usuário</th>
+                        <th>Concessionária</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>joao.silva@email.com</td>
+                        <td>Dealer</td>
+                        <td>Concessionária 1</td>
+                        <td>
+                            <button class="edit-button">Editar</button>
+                            <button class="delete-button">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Maria Souza</td>
+                        <td>maria.souza@email.com</td>
+                        <td>HQ</td>
+                        <td>Concessionária 2</td>
+                        <td>
+                            <button class="edit-button">Editar</button>
+                            <button class="delete-button">Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Adicione mais usuários conforme necessário -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<head>
+    <link rel="stylesheet" href="css/styleUser.css">
+</head>
+<div class="content-area" id="content-area">
+    <!-- Formulários -->
+    <div id="gerenciar-usuarios" class="form-section active">
+        <button id="criar-usuario" class="submit-button">Criar Usuário</button>
+        <button>Editar / Remover Usuário</button>
+        <div id="create-user-form-container" style="display: none;"> <!-- Container para o formulário -->
+            <h2>Criar Usuário</h2>
+            <form id="create-user-form">
+                <label for="user-name">Nome:</label>
+                <input type="text" id="user-name" required>
+
+                <label for="user-type">Tipo de usuário:</label>
+                <select id="user-type" required>
+                    <option value="administrador">Administrador</option>
+                    <option value="usuario">Usuário</option>
+                    <option value="concessionaria">Concessionária</option>
+                </select>
+
+                <div id="dealer-select-container" style="display: none;">
+                    <label for="dealer">Qual concessionária:</label>
+                    <input type="text" id="dealer" placeholder="Nome da Concessionária">
+                </div>
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>

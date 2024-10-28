@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Administrador</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Ajuste o caminho para o seu style.css -->
+</head>
+<body>
+        <!-- Header superior -->
+    <div class="header">
+        <img src="https://i.ibb.co/DDDsTh2/Logo.png" alt="Logo" class="logo">
+        <div class="button-group">
+            <button class="back-button" onclick="showFilterBar()">Voltar</button>
+            <button class="logout-button">Sair</button>
+        </div>
+    </div>
+
+    <!-- Barra de navegação com botões de filtro -->
+    <div class="filter-bar" id="filter-bar">
+        <button onclick="showSection('gerenciar-usuarios')" id="gerenciar-usuarios-btn">Gerenciar Usuários</button>
+        <button onclick="showSection('criar-formulario')" id="criar-formulario-btn">Criar Formulário</button>
+        <button onclick="showSection('vendas')" id="vendas-btn">Vendas</button>
+        <button onclick="showSection('pos-vendas')" id="pos-vendas-btn">Pós Vendas</button>
+        <button onclick="showSection('powerbi')" id="powerbi-btn">Power BI</button>
+    </div>
+    
+    <!-- Área de conteúdo User -->
+    <div class="content-area" id="content-area">
+        <!-- Formulários -->
+        <div id="gerenciar-usuarios" class="form-section">
+            <button id="criar-usuario" class="submit-button">Criar Usuário</button>
+            <button>Editar / Remover Usuário</button>
+            <div class="create-user-form-container" id="create-user-form-container">
+                <div class="modal-content">
+                    <h2>Criar Usuário</h2>
+                    <form id="create-user-form">
+                        <label for="user-name">Nome:</label>
+                        <input type="text" id="user-name" required>
+            
+                        <label for="user-type">Tipo de usuário:</label>
+                        <select id="user-type" required>
+                            <option value="administrador">Administrador</option>
+                            <option value="usuario">Usuário</option>
+                            <option value="concessionaria">Concessionária</option>
+                        </select>
+            
+                        <div id="dealer-select-container" style="display: none;">
+                            <label for="dealer-search">Qual concessionária:</label>
+                            <input type="text" id="dealer-search" placeholder="Pesquisar concessionária" oninput="filterDealers()">
+                            <select id="dealer" size="5" style="display: none;"></select> <!-- Caixa de opções para concessionária -->
+                        </div>
+                        <button type="submit">Salvar</button>
+                    </form>
+                    <button onclick="closeModal()">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-area" id="content-area">
+        <!-- Formulários -->
+        <div id="gerenciar-usuarios" class="form-section">
+            <button id="criar-usuario" class="submit-button">Criar Usuário</button>
+            <button>Editar / Remover Usuário</button>
+            <div class="create-user-form-container" id="create-user-form-container">
+                <div class="modal-content">
+                    <h2>Criar Usuário</h2>
+                    <form id="create-user-form">
+                        <label for="user-name">Nome:</label>
+                        <input type="text" id="user-name" required>
+            
+                        <label for="user-type">Tipo de usuário:</label>
+                        <select id="user-type" required>
+                            <option value="administrador">Administrador</option>
+                            <option value="usuario">Usuário</option>
+                            <option value="concessionaria">Concessionária</option>
+                        </select>
+            
+                        <div id="dealer-select-container" style="display: none;">
+                            <label for="dealer-search">Qual concessionária:</label>
+                            <input type="text" id="dealer-search" placeholder="Pesquisar concessionária" oninput="filterDealers()">
+                            <select id="dealer" size="5" style="display: none;"></select> <!-- Caixa de opções para concessionária -->
+                        </div>
+                        <button type="submit">Salvar</button>
+                    </form>
+                    <button onclick="closeModal()">Fechar</button>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <!-- Container para Review -->
+        <div id="review-container" class="review-container" style="display: none;"></div>
+    </div>
+        <script>
+            document.getElementById("criar-usuario").addEventListener("click", function() {
+                // Mostra o formulário na área de conteúdo
+                document.getElementById('create-user-form-container').style.display = 'block';
+                document.getElementById('review-container').style.display = 'none'; // Esconder review ao criar usuário
+            });
+    
+            function showSection(sectionId) {
+                // Esconde todas as seções primeiro
+                document.querySelectorAll('.form-section').forEach(section => {
+                    section.style.display = 'none'; // Esconde todas as seções
+                });
+    
+                // Exibe a seção selecionada
+                const selectedSection = document.getElementById(sectionId);
+                if (selectedSection) {
+                    selectedSection.style.display = 'block'; // Exibe a seção específica
+                }
+    
+                // Esconder o formulário de criação de usuário se não estiver na seção "gerenciar-usuarios"
+                if (sectionId !== 'gerenciar-usuarios') {
+                    document.getElementById('create-user-form-container').style.display = 'none';
+                    document.getElementById('review-container').style.display = 'none'; // Esconder review
+                } else {
+                    // Esconder o review ao gerenciar usuários
+                    document.getElementById('review-container').style.display = 'none';
+                }
+    
+                // Se for a seção "criar-formulario", carregue review.html
+                if (sectionId === 'criar-formulario') {
+                    loadReviewContent();
+                }
+            }
+    
+            function loadReviewContent() {
+                const reviewContainer = document.getElementById('review-container');
+                // Carregar o conteúdo de review.html
+                fetch('review.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        reviewContainer.innerHTML = data; // Insere o conteúdo carregado
+                        reviewContainer.style.display = 'block'; // Exibe o review
+                    })
+                    .catch(error => console.error('Erro ao carregar review.html:', error));
+            }
+    
+            function showFilterBar() {
+                // Exibe a barra de filtros e oculta a área de conteúdo
+                document.getElementById('filter-bar').classList.remove('hidden');
+                document.getElementById('content-area').style.display = 'none';
+    
+                // Remove a classe 'active' de todas as seções
+                document.querySelectorAll('.form-section').forEach(section => section.style.display = 'none');
+            }
+    
+            // Função para gerenciar a exibição do campo "Qual concessionária"
+            document.getElementById('user-type').addEventListener('change', function() {
+                const dealerSelectContainer = document.getElementById('dealer-select-container');
+                dealerSelectContainer.style.display = this.value === 'concessionaria' ? 'block' : 'none';
+            });
+    
+            // Função para salvar o usuário
+            document.getElementById('create-user-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita o envio do formulário
+    
+                const userName = document.getElementById('user-name').value;
+                const userType = document.getElementById('user-type').value;
+                const dealer = document.getElementById('dealer').value;
+                const creationDate = new Date().toLocaleString(); // Obtém a data atual formatada
+    
+                // Aqui você pode adicionar a lógica para salvar o usuário no seu sistema
+                console.log(`Usuário criado: ${userName}, Tipo: ${userType}, Concessionária: ${dealer}, Data: ${creationDate}`);
+    
+                // Fechar o formulário após salvar
+                document.getElementById('create-user-form-container').style.display = 'none';
+            });
+        </script>
+</body>
+</html>

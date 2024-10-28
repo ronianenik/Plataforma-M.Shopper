@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Avaliação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Informações de Avaliação</h2>
+    <form action="#" method="post">
+        <label for="nome_shopper">Nome do Shopper:</label>
+        <input type="text" id="nome_shopper" name="nome_shopper" required><br><br>
+        
+        <label>Sexo:</label>
+        <input type="radio" id="masculino_shopper" name="sexo_shopper" value="Masculino">
+        <label for="masculino_shopper">Masculino</label>
+        <input type="radio" id="feminino_shopper" name="sexo_shopper" value="Feminino">
+        <label for="feminino_shopper">Feminino</label><br><br>
+        
+        <label for="data_visita">Data da Visita:</label>
+        <input type="date" id="data_visita" name="data_visita" required><br><br>
+        
+        <label>Dia da Visita:</label>
+        <select id="dia_visita" name="dia_visita">
+          <option value="Domingo">Domingo</option>
+          <option value="Segunda">Segunda</option>
+          <option value="Terça">Terça</option>
+          <option value="Quarta">Quarta</option>
+          <option value="Quinta">Quinta</option>
+          <option value="Sexta">Sexta</option>
+          <option value="Sábado">Sábado</option>
+        </select><br><br>
+      
+        <label for="hora_entrada">Hora de Entrada:</label>
+        <input type="time" id="hora_entrada" name="hora_entrada" required><br><br>
+      
+        <label for="hora_saida">Hora de Saída:</label>
+        <input type="time" id="hora_saida" name="hora_saida" required><br><br>
+      
+        <label for="tempo_total_concessionaria">Tempo total na concessionária:</label>
+        <input type="text" id="tempo_total_concessionaria" name="tempo_total_concessionaria" required><br><br>
+      
+        <h3>Informações sobre o vendedor que você avaliou:</h3>
+
+        <label for="nome_vendedor">Nome do Vendedor:</label>
+        <input type="text" id="nome_vendedor" name="nome_vendedor" required><br><br>
+      
+        <label>Sexo do Vendedor:</label>
+        <input type="radio" id="masculino_vendedor" name="sexo_vendedor" value="Masculino">
+        <label for="masculino_vendedor">Masculino</label>
+        <input type="radio" id="feminino_vendedor" name="sexo_vendedor" value="Feminino">
+        <label for="feminino_vendedor">Feminino</label><br><br>
+      
+        <label for="idade_aproximada_vendedor">Idade Aproximada do Vendedor:</label>
+        <input type="text" id="idade_aproximada_vendedor" name="idade_aproximada_vendedor" required><br><br>
+      
+        <label for="cor_cabelo_vendedor">Cor do Cabelo do Vendedor:</label>
+        <input type="text" id="cor_cabelo_vendedor" name="cor_cabelo_vendedor" required><br><br>
+      
+        <label for="ano_marca_modelo_versao">Ano, Marca e Modelo - Versão (se disponível):</label>
+        <input type="text" id="ano_marca_modelo_versao" name="ano_marca_modelo_versao" required><br><br>
+      
+        <h2>Avaliação das Instalações</h2>
+        <label>Descrição do estacionamento disponibilizado na concessionária:</label><br>
+        <input type="radio" id="tres_ou_mais_vagas" name="estacionamento" value="2">
+        <label for="tres_ou_mais_vagas">Três ou mais vagas com até 60 metros do showroom  </label><br>
+        <input type="radio" id="uma_ou_duas_vagas" name="estacionamento" value="1">
+        <label for="uma_ou_duas_vagas">Somente uma ou duas vagas com até 60 metros do showroom  </label><br>
+        <input type="radio" id="sem_vagas" name="estacionamento" value="0">
+        <label for="sem_vagas">Sem vagas de estacionamento disponíveis em até 60 metros do showroom  </label><br><br>
+
+        <label>Facilidade de encontrar a área do estacionamento de clientes:</label><br>
+        <input type="radio" id="melhorias_estacionamento" name="facilidade_estacionamento" value="0">
+        <label for="melhorias_estacionamento">Necessário fazer melhorias  </label><br>
+        <input type="radio" id="aceitavel_estacionamento" name="facilidade_estacionamento" value="1">
+        <label for="aceitavel_estacionamento">Aceitável  </label><br>
+        <input type="radio" id="muito_bom_estacionamento" name="facilidade_estacionamento" value="2">
+        <label for="muito_bom_estacionamento">Muito bom  </label><br>
+        <input type="radio" id="extraordinario_estacionamento" name="facilidade_estacionamento" value="3">
+        <label for="extraordinario_estacionamento">Extraordinário  </label><br><br>
+
+        <label>Descrição das condições externas do prédio da concessionária:</label><br>
+        <input type="radio" id="melhorias_predio" name="condicoes_predio" value="0">
+        <label for="melhorias_predio">Necessário fazer melhorias  </label><br>
+        <input type="radio" id="aceitavel_predio" name="condicoes_predio" value="1">
+        <label for="aceitavel_predio">Aceitável  </label><br>
+        <input type="radio" id="muito_bom_predio" name="condicoes_predio" value="2">
+        <label for="muito_bom_predio">Muito bom  </label><br>
+        <input type="radio" id="extraordinario_predio" name="condicoes_predio" value="3">
+        <label for="extraordinario_predio">Extraordinário  </label><br><br>
+
+        <label>Descrição das condições externas do terreno total da concessionária:</label><br>
+        <input type="radio" id="melhorias_terreno" name="condicoes_terreno" value="0">
+        <label for="melhorias_terreno">Necessário fazer melhorias  </label><br>
+        <input type="radio" id="aceitavel_terreno" name="condicoes_terreno" value="1">
+        <label for="aceitavel_terreno">Aceitável  </label><br>
+        <input type="radio" id="muito_bom_terreno" name="condicoes_terreno" value="2">
+        <label for="muito_bom_terreno">Muito bom  </label><br>
+        <input type="radio" id="extraordinario_terreno" name="condicoes_terreno" value="3">
+        <label for="extraordinario_terreno">Extraordinário  </label><br><br>
+
+        <label>Descrição das condições internas do prédio da concessionária:</label><br>
+        <input type="radio" id="melhorias_interno" name="condicoes_interno" value="0">
+        <label for="melhorias_interno">Necessário fazer melhorias  </label><br>
+        <input type="radio" id="aceitavel_interno" name="condicoes_interno" value="1">
+        <label for="aceitavel_interno">Aceitável  </label><br>
+        <input type="radio" id="muito_bom_interno" name="condicoes_interno" value="2">
+        <label for="muito_bom_interno">Muito bom  </label><br>
+        <input type="radio" id="extraordinario_interno" name="condicoes_interno" value="3">
+        <label for="extraordinario_interno">Extraordinário  </label><br><br>
+
+        <label>O cliente utilizou o banheiro?</label><br>
+        <input type="radio" id="banheiro_sim" name="utilizou_banheiro" value="Sim">
+        <label for="banheiro_sim">Sim  </label><br>
+        <input type="radio" id="banheiro_nao" name="utilizou_banheiro" value="Não">
+        <label for="banheiro_nao">Não  </label><br><br>
+
+        <label>O Banheiro estava limpo?</label><br>
+        <input type="radio" id="limpo_sim" name="banheiro_limpo" value="2">
+        <label for="limpo_sim">Sim  </label><br>
+        <input type="radio" id="limpo_nao" name="banheiro_limpo" value="0">
+        <label for="limpo_nao">Não  </label><br><br>
+
+        <label>Descrição das condições do banheiro da concessionária:</label><br>
+        <input type="radio" id="melhorias_banheiro" name="condicoes_banheiro" value="0">
+        <label for="melhorias_banheiro">Necessário fazer melhorias  </label><br>
+        <input type="radio" id="aceitavel_banheiro" name="condicoes_banheiro" value="1">
+        <label for="aceitavel_banheiro">Aceitável  </label><br>
+        <input type="radio" id="muito_bom_banheiro" name="condicoes_banheiro" value="2">
+        <label for="muito_bom_banheiro">Muito bom  </label><br>
+        <input type="radio" id="extraordinario_banheiro" name="condicoes_banheiro" value="3">
+        <label for="extraordinario_banheiro">Extraordinário  </label><br><br>
+
+        <label>Descrição de quão claro a área de estacionamento estava:</label><br>
+        <input type="radio" id="nao_claro" name="claridade_estacionamento" value="0">
+        <label for="nao_claro">Não era claro, pois era difícil de encontrar  </label><br>
+        <input type="radio" id="placas_sinais" name="claridade_estacionamento" value="1">
+        <label for="placas_sinais">Placas ou sinais que mostravam onde estacionar  </label><br>
+        <input type="radio" id="facil_encontrar" name="claridade_estacionamento" value="2">
+        <label for="facil_encontrar">Estacionamento foi fácil de encontrar  </label><br><br>
+
+        <label for="comentarios">Outro Comentário sobre as instalações:</label><br>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
+
+
+        <h2>Abordagem</h2>
+        <label>O vendedor te atendeu em até 5 minutos (sem o cliente pedir para ser atendido)?</label><br>
+        <input type="radio" id="atendimento_5min_sim" name="atendimento_5min" value="2">
+        <label for="atendimento_5min_sim">Sim  </label><br>
+        <input type="radio" id="atendimento_5min_nao" name="atendimento_5min" value="0">
+        <label for="atendimento_5min_nao">Não  </label><br><br>
+
+        <label for="tempo_atendimento">Tempo que o vendedor levou para atender (sem o cliente ter pedido):</label><br>
+        <input type="text" id="tempo_atendimento" name="tempo_atendimento"><br><br>
+
+        <label>Mesmo não atendido em até 5 minutos, alguém da equipe abordou/deu assistência para o cliente durante este tempo?</label><br>
+        <input type="radio" id="assistencia_sim" name="assistencia" value="1">
+        <label for="assistencia_sim">Sim  </label><br>
+        <input type="radio" id="assistencia_nao" name="assistencia" value="0">
+        <label for="assistencia_nao">Não  </label><br><br>
+
+        <label>O cliente conseguiu encontrar atendimento dentro de 20 minutos após procura pró-ativa de um vendedor?</label><br>
+        <input type="radio" id="atendimento_20min_sim" name="atendimento_20min" value="1">
+        <label for="atendimento_20min_sim">Sim  </label><br>
+        <input type="radio" id="atendimento_20min_nao" name="atendimento_20min" value="0">
+        <label for="atendimento_20min_nao">Não  </label><br><br>
+
+        <label for="tempo_procura">Tempo gasto para encontrar um vendedor após procurar de forma pró-ativa por atendimento:</label><br>
+        <input type="text" id="tempo_procura" name="tempo_procura"><br><br>
+
+        <label>Tempo total para o cliente para ser atendido (resposta deve estar de acordo com a questão acima):</label><br>
+        <input type="radio" id="menos_2min" name="tempo_total" value="5">
+        <label for="menos_2min">Menos de 2 minutos  </label><br>
+        <input type="radio" id="entre_2_5min" name="tempo_total" value="4">
+        <label for="entre_2_5min">Entre 2 a 5 minutos  </label><br>
+        <input type="radio" id="entre_5_10min" name="tempo_total" value="1">
+        <label for="entre_5_10min">Entre 5 e 10 minutos  </label><br>
+        <input type="radio" id="mais_10min" name="tempo_total" value="0">
+        <label for="mais_10min">Mais de 10 minutos  </label><br><br>
+
+        <label>O vendedor cumprimentou com um aperto de mão?</label><br>
+        <input type="radio" id="aperto_mao_sim" name="aperto_mao" value="1">
+        <label for="aperto_mao_sim">Sim  </label><br>
+        <input type="radio" id="aperto_mao_nao" name="aperto_mao" value="0">
+        <label for="aperto_mao_nao">Não  </label><br><br>
+
+        <label>O vendedor estava vestido de maneira profissional?</label><br>
+        <input type="radio" id="vestimenta_profissional_sim" name="vestimenta_profissional" value="1">
+        <label for="vestimenta_profissional_sim">Sim  </label><br>
+        <input type="radio" id="vestimenta_profissional_nao" name="vestimenta_profissional" value="0">
+        <label for="vestimenta_profissional_nao">Não  </label><br><br>
+
+        <label>O vendedor estava usando um crachá de identificação (ou tinha o nome escrito na camisa)?</label><br>
+        <input type="radio" id="cracha_sim" name="cracha" value="1">
+        <label for="cracha_sim">Sim  </label><br>
+        <input type="radio" id="cracha_nao" name="cracha" value="0">
+        <label for="cracha_nao">Não  </label><br><br>
+
+        <label>Em qual momento o vendedor perguntou o nome do cliente?</label><br>
+        <input type="radio" id="momento_abordagem" name="momento_nome" value="3">
+        <label for="momento_abordagem">Quando o vendedor abordou o cliente  </label><br>
+        <input type="radio" id="momento_posterior" name="momento_nome" value="1">
+        <label for="momento_posterior">Em algum momento posterior à abordagem  </label><br>
+        <input type="radio" id="nunca_perguntou" name="momento_nome" value="0">
+        <label for="nunca_perguntou">Vendedor nunca perguntou o nome do cliente  </label><br><br>
+
+        <label for="descricao_abordagem">Descrição da abordagem:</label><br>
+        <textarea id="descricao_abordagem" name="descricao_abordagem" rows="4" cols="50"></textarea><br><br>
+
+        <h2>Avaliação das necessidades</h2>
+        <label>O vendedor usava algum dispositivo/planilha/prancheta com informações para o atendimento?</label><br>
+        <input type="radio" id="dispositivo_digital" name="dispositivo" value="2">
+        <label for="dispositivo_digital">Dispositivo Digital/Tablet  </label><br>
+        <input type="radio" id="papel" name="dispositivo" value="1">
+        <label for="papel">Papel  </label><br>
+        <input type="radio" id="outros" name="dispositivo" value="0">
+        <label for="outros">Outros  </label><br>
+        <input type="radio" id="nenhum" name="dispositivo" value="0">
+        <label for="nenhum">Vendedor não usava nenhum dispositivo/planilha/prancheta  </label><br><br>
+      
+        <label>O vendedor perguntou se o cliente tem ou teve algum veículo da marca?</label><br>
+        <input type="radio" id="veiculo_sim" name="veiculo" value="0">
+        <label for="veiculo_sim">Sim  </label><br>
+        <input type="radio" id="veiculo_nao" name="veiculo" value="0">
+        <label for="veiculo_nao">Não  </label><br><br>
+      
+        <label>O vendedor perguntou quando o cliente queria comprar o veículo?</label><br>
+        <input type="radio" id="compra_sim" name="compra" value="1">
+        <label for="compra_sim">Sim  </label><br>
+        <input type="radio" id="compra_nao" name="compra" value="0">
+        <label for="compra_nao">Não  </label><br><br>
+      
+        <label>O vendedor perguntou quais outras marcas o cliente estava considerando?</label><br>
+        <input type="radio" id="marcas_sim" name="marcas" value="1">
+        <label for="marcas_sim">Sim  </label><br>
+        <input type="radio" id="marcas_nao" name="marcas" value="0">
+        <label for="marcas_nao">Não  </label><br><br>
+      
+        <label>O vendedor perguntou ao cliente sobre seus hábitos de direção/uso (estrada, transporta criança, etc)?</label><br>
+        <input type="radio" id="habitos_sim" name="habitos" value="1">
+        <label for="habitos_sim">Sim  </label><br>
+        <input type="radio" id="habitos_nao" name="habitos" value="0">
+        <label for="habitos_nao">Não  </label><br><br>
+      
+        <label>O vendedor perguntou ao cliente como ele planejava o pagamento? (financiado, à vista, etc)?</label><br>
+        <input type="radio" id="pagamento_sim" name="pagamento" value="1">
+        <label for="pagamento_sim">Sim  </label><br>
+        <input type="radio" id="pagamento_nao" name="pagamento" value="0">
+        <label for="pagamento_nao">Não  </label><br><br>
+      
+        <label>O vendedor perguntou se o cliente tinha veículo usado para a troca?</label><br>
+        <input type="radio" id="troca_sim" name="troca" value="1">
+        <label for="troca_sim">Sim  </label><br>
+        <input type="radio" id="troca_nao" name="troca" value="0">
+        <label for="troca_nao">Não  </label><br><br>
+      
+        <label>O vendedor perguntou se o cliente tinha pesquisado sobre o veículo antes de vir à concessionária?</label><br>
+        <input type="radio" id="pesquisa_sim" name="pesquisa" value="1">
+        <label for="pesquisa_sim">Sim  </label><br>
+        <input type="radio" id="pesquisa_nao" name="pesquisa" value="0">
+        <label for="pesquisa_nao">Não  </label><br><br>
+      
+        <label>O vendedor perguntou ao cliente qual característica era mais importante na escolha do modelo a comprar?</label><br>
+        <input type="radio" id="caracteristica_sim" name="caracteristica" value="1">
+        <label for="caracteristica_sim">Sim  </label><br>
+        <input type="radio" id="caracteristica_nao" name="caracteristica" value="0">
+        <label for="caracteristica_nao">Não  </label><br><br>
+      
+        <label>Descrição da característica do veículo mais importante informada ao vendedor:</label><br>
+        <input type="radio" id="seguranca" name="descricao_caracteristica" value="0">
+        <label for="seguranca">Segurança (ex. airbags, freios ABS, etc).  </label><br>
+        <input type="radio" id="potencia" name="descricao_caracteristica" value="0">
+        <label for="potencia">Potência/Desempenho (ex. quantidade de cavalos, torque, suspensão, etc).  </label><br>
+        <input type="radio" id="conforto" name="descricao_caracteristica" value="0">
+        <label for="conforto">Conforto/Conveniência (ex. qualidade ao andar, silêncio interno, espaço interior, etc).  </label><br>
+        <input type="radio" id="qualidade" name="descricao_caracteristica" value="0">
+        <label for="qualidade">Qualidade (confiabilidade, baixo custo de manutenção, etc).  </label><br>
+        <input type="radio" id="outra_caracteristica" name="descricao_caracteristica" value="0">
+        <label for="outra_caracteristica">Outra  </label><br><br>
+      
+        <label>Descrição de outra característica de veículo:</label><br>
+        <input type="text" id="descricao_outra" name="descricao_outra"><br><br>
+      
+        <label>Descrição do esforço do vendedor em entender a necessidade principal do cliente:</label><br>
+        <input type="radio" id="esforco_suficiente" name="esforco" value="2">
+        <label for="esforco_suficiente">Gastou tempo suficiente/ideal para entender a necessidade principal  </label><br>
+        <input type="radio" id="esforco_minimo" name="esforco" value="1">
+        <label for="esforco_minimo">Gastou tempo mínimo para entender a necessidade principal  </label><br>
+        <input type="radio" id="esforco_nenhum" name="esforco" value="0">
+        <label for="esforco_nenhum">Não gastou tempo para entender a necessidade principal  </label><br><br>
+  
+        <h2>DEMONSTRAÇÃO DO PRODUTO</h2> 
+        <label>O vendedor convidou o cliente a sentar no veículo?</label><br>
+        <input type="radio" id="sentar_sim" name="sentar" value="1">
+        <label for="sentar_sim">Sim  </label><br>
+        <input type="radio" id="sentar_nao" name="sentar" value="0">
+        <label for="sentar_nao">Não  </label><br><br>
+
+        <label>Explicação do vendedor sobre consumo de combustível</label><br>
+        <input type="radio" id="comparou_concorrencia" name="combustivel" value="2">
+        <label for="comparou_concorrencia">Comparou com a concorrência  </label><br>
+        <input type="radio" id="mencionou_km" name="combustivel" value="1">
+        <label for="mencionou_km">Mencionou quilometros por litros mas não comparou  </label><br>
+        <input type="radio" id="nao_mencionou" name="combustivel" value="0">
+        <label for="nao_mencionou">Não mencionou consumo de combustível  </label><br><br>
+
+        <label>Explicação do vendedor sobre recursos de segurança do veículo (airbags, freios ABS, etc)</label><br>
+        <input type="radio" id="seguranca_total" name="seguranca" value="2">
+        <label for="seguranca_total">Explicou totalmente demonstrando ou mencionando detalhes  </label><br>
+        <input type="radio" id="seguranca_breve" name="seguranca" value="1">
+        <label for="seguranca_breve">Mencionou brevemente mas não demonstrou ou explicou detalhes  </label><br>
+        <input type="radio" id="seguranca_nao_mencionou" name="seguranca" value="0">
+        <label for="seguranca_nao_mencionou">Não mencionou  </label><br><br>
+
+        <label>Explicação do vendedor sobre potência e/ou desempenho (quantidade de cavalos, tamanho do motor, etc)</label><br>
+        <input type="radio" id="potencia_total" name="potencia" value="2">
+        <label for="potencia_total">Explicou totalmente demonstrando ou mencionando detalhes  </label><br>
+        <input type="radio" id="potencia_breve" name="potencia" value="1">
+        <label for="potencia_breve">Mencionou brevemente mas não demonstrou ou explicou detalhes  </label><br>
+        <input type="radio" id="potencia_nao_mencionou" name="potencia" value="0">
+        <label for="potencia_nao_mencionou">Não mencionou  </label><br><br>
+
+        <label>Explicação do vendedor sobre conforto do veículo (qualidade ao andar, espaço interior, silêncio, controle de temperatura, etc)</label><br>
+        <input type="radio" id="conforto_total" name="conforto" value="2">
+        <label for="conforto_total">Explicou totalmente demonstrando ou mencionando detalhes  </label><br>
+        <input type="radio" id="conforto_breve" name="conforto" value="1">
+        <label for="conforto_breve">Mencionou brevemente mas não demonstrou ou explicou detalhes  </label><br>
+        <input type="radio" id="conforto_nao_mencionou" name="conforto" value="0">
+        <label for="conforto_nao_mencionou">Não mencionou  </label><br><br>
+
+        <label>Explicação do vendedor sobre info-tainment do veículo (sistema de áudio, navegação, etc)</label><br>
+        <input type="radio" id="infotainment_total" name="infotainment" value="2">
+        <label for="infotainment_total">Explicou totalmente demonstrando ou mencionando detalhes  </label><br>
+        <input type="radio" id="infotainment_breve" name="infotainment" value="1">
+        <label for="infotainment_breve">Mencionou brevemente mas não demonstrou ou explicou detalhes  </label><br>
+        <input type="radio" id="infotainment_nao_mencionou" name="infotainment" value="0">
+        <label for="infotainment_nao_mencionou">Não mencionou  </label><br><br>
+
+        <label>Explicação do vendedor sobre qualidade do veículo (confiabilidade, garantia, baixo custo de manutenção, etc)</label><br>
+        <input type="radio" id="qualidade_total" name="qualidade" value="2">
+        <label for="qualidade_total">Explicou totalmente demonstrando ou mencionando detalhes  </label><br>
+        <input type="radio" id="qualidade_breve" name="qualidade" value="1">
+        <label for="qualidade_breve">Mencionou brevemente mas não demonstrou ou explicou detalhes  </label><br>
+        <input type="radio" id="qualidade_nao_mencionou" name="qualidade" value="0">
+        <label for="qualidade_nao_mencionou">Não mencionou  </label><br><br>
+
+        <label>Quais recursos o vendedor fisicamente demonstrou (selecione todos que se aplicam):</label><br>
+        <input type="checkbox" id="motor" name="recursos[]" value="1">
+        <label for="motor">Motor/compartimento do motor  </label><br>
+        <input type="checkbox" id="porta_mala" name="recursos[]" value="1">
+        <label for="porta_mala">Porta-mala ou hatch (porta traseira)  </label><br>
+        <input type="checkbox" id="bancos" name="recursos[]" value="1">
+        <label for="bancos">Bancos traseiros reclináveis  </label><br>
+        <input type="checkbox" id="bancos_espaco" name="recursos[]" value="1">
+        <label for="bancos_espaco">Espaço dos bancos traseiros  </label><br>
+        <input type="checkbox" id="ajustes" name="recursos[]" value="1">
+        <label for="ajustes">Assentos, volante e/ou pedais ajustáveis  </label><br>
+        <input type="checkbox" id="bluetooth" name="recursos[]" value="1">
+        <label for="bluetooth">Conectividade do Bluetooth/wireless  </label><br>
+        <input type="checkbox" id="gps" name="recursos[]" value="1">
+        <label for="gps">GPS/navegação  </label><br>
+        <input type="checkbox" id="camera_re" name="recursos[]" value="1">
+        <label for="camera_re">Câmera de ré  </label><br>
+        <input type="checkbox" id="ar_condicionado" name="recursos[]" value="1">
+        <label for="ar_condicionado">Ar condicionado  </label><br>
+        <input type="checkbox" id="seguranca_recursos" name="recursos[]" value="1">
+        <label for="seguranca_recursos">Recursos de segurança (ex. airbags, ABS, etc)  </label><br>
+        <input type="checkbox" id="botao_ignicao" name="recursos[]" value="1">
+        <label for="botao_ignicao">Botão de ignição  </label><br>
+        <input type="checkbox" id="farol" name="recursos[]" value="1">
+        <label for="farol">Faróis dianteiros  </label><br>
+        <input type="checkbox" id="modos_direcao" name="recursos[]" value="1">
+        <label for="modos_direcao">Modos de direção diferentes (ex. Eco, Sport, etc)  </label><br><br>
+
+        <label>Descrição do esforço do vendedor para adaptar a demonstração do produto à necessidade principal do cliente:</label><br>
+        <input type="radio" id="esforco_grande" name="esforco_demonstracao" value="3">
+        <label for="esforco_grande">Grande esforço para adaptar a apresentação à necessidade do cliente  </label><br>
+        <input type="radio" id="esforco_razoavel" name="esforco_demonstracao" value="2">
+        <label for="esforco_razoavel">Esforço razoável para adaptar a apresentação à necessidade do cliente  </label><br>
+        <input type="radio" id="esforco_pequeno" name="esforco_demonstracao" value="1">
+        <label for="esforco_pequeno">Pequeno esforço para adaptar a apresentação à necessidade do cliente  </label><br>
+        <input type="radio" id="esforco_nenhum" name="esforco_demonstracao" value="0">
+        <label for="esforco_nenhum">Nenhum esforço para adaptar a apresentação à necessidade do cliente  </label><br><br>
+
+        <h2>Formulário de Test-Drive</h2>
+        <label>O test-drive foi oferecido (sem a necessidade de pedir)?</label><br>
+        <input type="radio" id="test_drive_sim" name="test_drive_offered" value="5">
+        <label for="test_drive_sim">Sim  </label><br>
+        <input type="radio" id="test_drive_nao" name="test_drive_offered" value="0">
+        <label for="test_drive_nao">Não  </label><br><br>
+
+        <label>Antes do test-drive, o vendedor:</label><br>
+        <input type="radio" id="vendedor_copia" name="seller_action" value="2">
+        <label for="vendedor_copia">Fez uma cópia da carteira de motorista  </label><br>
+        <input type="radio" id="vendedor_pediu" name="seller_action" value="1">
+        <label for="vendedor_pediu">Pediu para ver a carteira de motorista, mas não fez cópia  </label><br>
+        <input type="radio" id="vendedor_nao_pediu" name="seller_action" value="0">
+        <label for="vendedor_nao_pediu">Não pediu a carteira de motorista  </label><br><br>
+
+        <label>Alguém acompanhou o cliente no test-drive?</label><br>
+        <input type="radio" id="acompanhou_sim" name="accompanying_person" value="1">
+        <label for="acompanhou_sim">Sim  </label><br>
+        <input type="radio" id="acompanhou_nao" name="accompanying_person" value="0">
+        <label for="acompanhou_nao">Não  </label><br><br>
+
+        <label>Se sim, quem acompanhou o cliente no test-drive?</label><br>
+        <input type="radio" id="especialista" name="who_accompanied" value="2">
+        <label for="especialista">Especialista de test-drive  </label><br>
+        <input type="radio" id="vendedor" name="who_accompanied" value="1">
+        <label for="vendedor">Vendedor  </label><br>
+        <input type="radio" id="outra_pessoa" name="who_accompanied" value="1">
+        <label for="outra_pessoa">Outra pessoa (por favor especifique):</label>
+        <input type="text" name="other_person"><br><br>
+
+        <label>O cliente teve algum problema durante o test-drive?</label><br>
+        <input type="radio" id="problema_sim" name="problems_during_test_drive" value="0">
+        <label for="problema_sim">Sim  </label><br>
+        <input type="radio" id="problema_nao" name="problems_during_test_drive" value="3">
+        <label for="problema_nao">Não  </label><br><br>
+
+        <label>Problemas do veículo durante o test-drive:</label><br>
+        <input type="radio" id="problema_conduzido" name="vehicle_problems" value="0">
+        <label for="problema_conduzido">Problema que impedia o veículo desejado de ser conduzido (bateria descarregada, etc)</label><br>
+        <input type="radio" id="problema_veiculo" name="vehicle_problems" value="0">
+        <label for="problema_veiculo">Problema com o veículo conduzido (luz de aviso, partes soltas, etc)</label><br>
+        <input type="radio" id="limpeza_interior" name="vehicle_problems" value="0">
+        <label for="limpeza_interior">Limpeza interior/problema de preparação do interior</label><br>
+        <input type="radio" id="limpeza_exterior" name="vehicle_problems" value="0">
+        <label for="limpeza_exterior">Limpeza exterior/problema de preparação do exterior</label><br>
+        <input type="radio" id="pouco_combustivel" name="vehicle_problems" value="0">
+        <label for="pouco_combustivel">Pouco combustível  </label><br>
+        <input type="radio" id="dificuldade_acesso" name="vehicle_problems" value="0">
+        <label for="dificuldade_acesso">Dificuldade de ter acesso ao veículo desejado (preso atrás de outros carros, etc)  </label><br>
+        <input type="radio" id="localizado_distancia" name="vehicle_problems" value="0">
+        <label for="localizado_distancia">Veículo desejado localizado a mais de 5 minutos de distância  </label><br><br>
+
+        <label>Explicações dos problemas com o test-drive:</label><br>
+        <textarea name="problems_explanations" rows="4" cols="50"></textarea><br><br>
+
+        <label>O cliente dirigiu em uma variedade de ruas (estradas, ruas de cidade, etc)?</label><br>
+        <input type="radio" id="variedade_sim" name="variety_of_roads" value="1">
+        <label for="variedade_sim">Sim  </label><br>
+        <input type="radio" id="variedade_nao" name="variety_of_roads" value="0">
+        <label for="variedade_nao">Não  </label><br><br>
+
+        <label>O cliente dirigiu o veículo em uma velocidade de estrada (100 km/h ou mais) por pelo menos um quilômetro?</label><br>
+        <input type="radio" id="velocidade_sim" name="highway_speed" value="1">
+        <label for="velocidade_sim">Sim  </label><br>
+        <input type="radio" id="velocidade_nao" name="highway_speed" value="0">
+        <label for="velocidade_nao">Não  </label><br><br>
+
+        <label>Tempo de Duração do test-drive:</label><br>
+        <input type="radio" id="duracao_menos_5" name="duration" value="0">
+        <label for="duracao_menos_5">Menos de 5 minutos  </label><br>
+        <input type="radio" id="duracao_5_10" name="duration" value="1">
+        <label for="duracao_5_10">Entre 5 a 10 minutos  </label><br>
+        <input type="radio" id="duracao_10_15" name="duration" value="2">
+        <label for="duracao_10_15">Entre 10 a 15 minutos  </label><br>
+        <input type="radio" id="duracao_mais_15" name="duration" value="3">
+        <label for="duracao_mais_15">Mais de 15 minutos  </label><br><br>
+
+        <h2>Formulário de Financiamento</h2>
+        <label>A concessionária forneceu um plano de financiamento (baseado no melhor preço possível)?</label><br>
+        <input type="radio" id="financiamento_sim" name="financiamento" value="1">
+        <label for="financiamento_sim">Forneceu opções de financiamento mensal  </label><br>
+        <input type="radio" id="financiamento_nao" name="financiamento" value="0">
+        <label for="financiamento_nao">Não forneceu opções de financiamento mensal  </label><br><br>
+
+        <label>Tempo do contrato de financiamento fornecido:</label><br>
+        <input type="radio" id="12_meses" name="contrato_financiamento" value="0">
+        <label for="12_meses">12 meses  </label><br>
+        <input type="radio" id="24_meses" name="contrato_financiamento" value="0">
+        <label for="24_meses">24 meses  </label><br>
+        <input type="radio" id="36_meses" name="contrato_financiamento" value="0">
+        <label for="36_meses">36 meses  </label><br>
+        <input type="radio" id="48_meses" name="contrato_financiamento" value="0">
+        <label for="48_meses">48 meses  </label><br>
+        <input type="radio" id="60_meses" name="contrato_financiamento" value="0">
+        <label for="60_meses">60 meses  </label><br>
+        <input type="radio" id="72_meses" name="contrato_financiamento" value="0">
+        <label for="72_meses">72 meses  </label><br>
+        <input type="radio" id="84_meses" name="contrato_financiamento" value="0">
+        <label for="84_meses">84 meses  </label><br>
+        <input type="radio" id="outros" name="contrato_financiamento" value="0">
+        <label for="outros">Outros  </label><br><br>
+
+        <label>Em qual formato a concessionária apresentou a informação preço ao cliente?</label><br>
+        <input type="radio" id="folha_impressa" name="formato_preco" value="2">
+        <label for="folha_impressa">Uma folha impressa de computador/sistema detalhando o preço e a informação de pagamento  </label><br>
+        <input type="radio" id="folha_escrita" name="formato_preco" value="1">
+        <label for="folha_escrita">Uma folha escrita à mão detalhando o preço e a informação de pagamento  </label><br>
+        <input type="radio" id="tela_computador" name="formato_preco" value="1">
+        <label for="tela_computador">Mostrou na tela do computador ou dispositivo eletrônico  </label><br>
+        <input type="radio" id="verbal" name="formato_preco" value="0">
+        <label for="verbal">Falou apenas verbalmente  </label><br><br>
+
+        <label>A concessionária permitiu o cliente levar para casa uma cópia da informação de preço e financiamento?</label><br>
+        <input type="radio" id="copia_sim" name="copia_informacao" value="1">
+        <label for="copia_sim">Sim  </label><br>
+        <input type="radio" id="copia_nao" name="copia_informacao" value="0">
+        <label for="copia_nao">Não  </label><br><br>
+
+        <label>Descrição da vontade da concessionária em fornecer o preço:</label><br>
+        <input type="radio" id="preco_antes" name="vontade_fornecer_preco" value="2">
+        <label for="preco_antes">Forneceu o preço antes de eu pedir  </label><br>
+        <input type="radio" id="preco_boa_vontade" name="vontade_fornecer_preco" value="1">
+        <label for="preco_boa_vontade">Quando eu pedi, teve muita boa vontade em fornecer o preço  </label><br>
+        <input type="radio" id="preco_relutante" name="vontade_fornecer_preco" value="0">
+        <label for="preco_relutante">Quando eu pedi, inicialmente ficou relutante mas ainda forneceu o preço  </label><br><br>
+    
+        <label>Descrição do papel do vendedor em fornecer o preço:</label><br>
+        <input type="radio" id="vendedor_sem_gerente" name="papel_vendedor" value="0">
+        <label for="vendedor_sem_gerente">Forneceu o preço sem o gerente  </label><br>
+        <input type="radio" id="vendedor_checar_gerente" name="papel_vendedor" value="0">
+        <label for="vendedor_checar_gerente">Forneceu o preço depois de checar com o gerente  </label><br>
+        <input type="radio" id="gerente_forneceu" name="papel_vendedor" value="0">
+        <label for="gerente_forneceu">Gerente (não o vendedor) acabou fornecendo o preço  </label><br>
+        <input type="radio" id="outros_vendedor" name="papel_vendedor" value="0">
+        <label for="outros_vendedor">Outros  </label>
+
+        <label>Se outro, por favor explique:</label><br>
+        <textarea name="explain_other" rows="4" cols="50"></textarea><br><br>
+
+        <label>O vendedor deixou o cliente sozinho ou sem atendimento por mais de um minuto?</label><br>
+        <input type="radio" id="deixou_sim" name="deixou_sozinho" value="0">Sim<br>
+        <input type="radio" id="deixou_nao" name="deixou_sozinho" value="2">Não<br><br>
+
+        <label>Quantas vezes o vendedor deixou o cliente sozinho?</label><br>
+        <input type="radio" id="uma_vez" name="vezes_sozinho" value="0">Uma vez<br>
+        <input type="radio" id="duas_vezes" name="vezes_sozinho" value="0">Duas vezes<br>
+        <input type="radio" id="tres_vezes_ou_mais" name="vezes_sozinho" value="0">Três vezes ou mais<br><br>
+
+        <label>Tempo total que o vendedor deixou o cliente sozinho:</label><br>
+        <input type="text" name="tempo_sozinho"><br><br>
+
+        <label>Explicação do porquê o vendedor deixou o cliente sozinho:</label><br>
+        <textarea name="explicacao_sozinho"></textarea><br><br>
+
+        <label>O vendedor segurou a porta do showroom aberta para o cliente?</label><br>
+        <input type="radio" id="porta_sim" name="porta_showroom" value="1">Sim<br>
+        <input type="radio" id="porta_nao" name="porta_showroom" value="0">Não<br>
+        <input type="radio" id="porta_na" name="porta_showroom" value="0">N/A - Não passou pela porta do showroom com o cliente<br><br>
+
+        <label>O vendedor ofereceu uma bebida ao cliente?</label><br>
+        <input type="radio" id="bebida_sim" name="bebida" value="1">Sim<br>
+        <input type="radio" id="bebida_nao" name="bebida" value="0">Não<br><br>
+
+        <label>O vendedor forneceu materiais explicativos (brochuras)?</label><br>
+        <input type="radio" id="materiais_sim" name="materiais" value="1">Sim<br>
+        <input type="radio" id="materiais_nao" name="materiais" value="0">Não<br><br>
+
+        <label>Se alguma informação de contato do cliente foi requisitada, marque esta questão com "Sim".</label><br>
+        <input type="radio" id="contato_sim" name="contato_requisitado" value="2">Sim<br>
+        <input type="radio" id="contato_nao" name="contato_requisitado" value="0">Não<br><br>
+
+        <label>Tipo de informação de contato do cliente que foi requisitado:</label><br>
+        <input type="radio" id="telefone" name="tipo_contato" value="0">Número de telefone<br>
+        <input type="radio" id="email" name="tipo_contato" value="0">E-mail<br>
+        <input type="radio" id="endereco" name="tipo_contato" value="0">Endereço<br>
+        <input type="radio" id="nao_requisitou" name="tipo_contato" value="0">Não requisitou informação de contato<br><br>
+
+        <label>O cliente foi apresentado para o gerente antes de sair da concessionária?</label><br>
+        <input type="radio" id="apresentado_sim" name="apresentado_gerente" value="1">Sim<br>
+        <input type="radio" id="apresentado_nao" name="apresentado_gerente" value="0">Não<br><br>
+
+        <label>Em qual momento o vendedor apresentou o cliente ao gerente ou a um vendedor sênior?</label><br>
+        <input type="radio" id="inicio" name="momento_apresentacao" value="2">Próximo do início, logo após a chegada<br>
+        <input type="radio" id="meio" name="momento_apresentacao" value="1">No meio da experiência<br>
+        <input type="radio" id="final" name="momento_apresentacao" value="0">No final, pouco antes de sair da concessionária<br><br>
+
+        <label>Descrição da conversa entre o cliente e o gerente:</label><br>
+        <textarea name="conversa_gerente"></textarea><br><br>
+
+        <label>Em algum momento, durante o processo de compra, o vendedor mencionou as vantagens ou benefícios de comprar nesta concessionária em particular, comparado com outras desta mesma área? (marque todas que aplicam)</label><br>
+        <input type="checkbox" id="concessionaria_familiar" name="vantagens" value="1">Concessionária familiar (ou de propriedade de uma pessoa)<br>
+        <input type="checkbox" id="muito_tempo" name="vantagens" value="1">Estão no ramo há muito tempo<br>
+        <input type="checkbox" id="apoio_comunidade" name="vantagens" value="1">Apoia a comunidade local (escolas, igrejas, etc)<br>
+        <input type="checkbox" id="qualidade_servico" name="vantagens" value="1">Falou sobre a alta qualidade do departamento de serviço pós-venda da concessionária<br>
+        <input type="checkbox" id="transporte_taxi" name="vantagens" value="1">Transporte de táxi gratuito durante as visitas de serviço<br>
+        <input type="checkbox" id="lavagens_carro" name="vantagens" value="1">Lavagens de carro gratuitas<br>
+        <input type="checkbox" id="disponibilidade_estoque" name="vantagens" value="1">Grande disponibilidade de estoque<br>
+        <input type="checkbox" id="precos_baixos" name="vantagens" value="1">Preços mais baixos<br>
+        <input type="checkbox" id="reputacao_servico" name="vantagens" value="1">Reputação em serviços ao cliente/satisfação do cliente<br>
+        <input type="checkbox" id="premios" name="vantagens" value="1">Prêmios que a concessionária ganhou<br>
+        <input type="checkbox" id="outros" name="vantagens" value="1">Outros<br>
+        <input type="checkbox" id="sem_vantagens" name="vantagens" value="0">Marque aqui se o vendedor não mencionou qualquer vantagem de comprar naquela concessionária em particular<br><br>
+
+        <label>Descrição de "Outras" vantagens da concessionária:</label><br>
+        <textarea name="outras_vantagens"></textarea><br><br>
+
+        <label>Algum funcionário da concessionária mencionou incentivos específicos (troca com troco, financiamento especial, etc) disponíveis para este veículo?</label><br>
+        <input type="radio" id="incentivos_sim" name="incentivos" value="1">Sim<br>
+        <input type="radio" id="incentivos_nao" name="incentivos" value="0">Não<br><br>
+
+        <label>Descrição do incentivo mencionado:</label><br>
+        <textarea name="descricao_incentivo"></textarea><br><br>
+
+        <label>Algum funcionário sugeriu quanto de desconto o cliente poderia ter no veículo?</label><br>
+        <input type="radio" id="desconto_especifico" name="desconto" value="2">Sugeriu um desconto específico ou condição específica<br>
+        <input type="radio" id="bom_preco" name="desconto" value="1">Sugeriu que o cliente poderia ter um bom preço/condição sem mencionar valores específicos<br>
+        <input type="radio" id="nao_mencionou" name="desconto" value="0">Não mencionou preços<br><br>
+
+        <label>Descrição da condição especial que o vendedor ofereceu:</label><br>
+        <textarea name="condicao_especial"></textarea><br><br>
+
+        <label>Descrição do esforço do vendedor para mostrar o departamento de serviços pós-venda da concessionária:</label><br>
+        <input type="checkbox" id="apresentou_membro" name="esforco_servico" value="1">Apresentou o cliente a um membro do departamento de serviço pós-venda<br>
+        <input type="checkbox" id="mostrou_espera" name="esforco_servico" value="1">Mostrou ao cliente a área de espera<br>
+        <input type="checkbox" id="mostrou_servico" name="esforco_servico" value="1">Mostrou ao cliente a área de serviço (baias de serviço)<br>
+        <input type="checkbox" id="mencionou_brevemente" name="esforco_servico" value="1">Mencionou brevemente ou apontou o departamento de serviço pós-venda<br>
+        <input type="checkbox" id="nao_mencionou" name="esforco_servico" value="0">Não mencionou ou mostrou o departamento de serviço pós-venda<br><br>
+
+        <label>Descreva como o vendedor tentou mostrar o departamento de serviços pós-venda:</label><br>
+        <textarea name="tentativa_servico"></textarea><br><br>
+
+        <label>O vendedor fez um teste de direção com o cliente?</label><br>
+        <input type="radio" id="teste_sim" name="teste_direcao" value="1">Sim<br>
+        <input type="radio" id="teste_nao" name="teste_direcao" value="0">Não<br><br>
+
+        <label>Qual a distância do teste de direção?</label><br>
+        <input type="radio" id="menor_1_milha" name="distancia_teste" value="0">Menor que 1 milha<br>
+        <input type="radio" id="1_a_3_milhas" name="distancia_teste" value="1">De 1 a 3 milhas<br>
+        <input type="radio" id="maior_3_milhas" name="distancia_teste" value="2">Maior que 3 milhas<br><br>
+
+        <label>O vendedor forneceu informações sobre as características do veículo?</label><br>
+        <input type="radio" id="caracteristicas_sim" name="caracteristicas" value="1">Sim<br>
+        <input type="radio" id="caracteristicas_nao" name="caracteristicas" value="0">Não<br><br>
+
+        <label>Se sim, quais características?</label><br>
+        <textarea name="caracteristicas_veiculo"></textarea><br><br>
+
+        <label>O vendedor ofereceu um acompanhamento após a venda?</label><br>
+        <input type="radio" id="acompanhamento_sim" name="acompanhamento" value="1">Sim<br>
+        <input type="radio" id="acompanhamento_nao" name="acompanhamento" value="0">Não<br><br>
+
+        <label>Descrição do acompanhamento oferecido:</label><br>
+        <textarea name="descricao_acompanhamento"></textarea><br><br>
+
+        <label>Alguma informação adicional:</label><br>
+        <textarea name="informacao_adicional"></textarea><br><br>
+
+
+        <h2>Follow Up</h2>
+        <label>A concessionária entrou em contato com o cliente em até 3 dias após a visita?</label><br>
+        <input type="radio" id="contato_sim" name="contato_timely" value="3">Sim<br>
+        <input type="radio" id="contato_nao" name="contato_timely" value="0">Não<br><br>
+
+        <label>Tempo entre a visita pessoal à concessionária e o primeiro contato:</label><br>
+        <input type="radio" id="mesmo_dia" name="tempo_contato" value="1">Mesmo dia<br>
+        <input type="radio" id="dia_seguinte" name="tempo_contato" value="1">Dia seguinte<br>
+        <input type="radio" id="dois_dias" name="tempo_contato" value="1">Dois dias<br>
+        <input type="radio" id="tres_dias" name="tempo_contato" value="1">Três dias<br><br>
+
+        <label>Método que a concessionária contactou o cliente:</label><br>
+        <input type="radio" id="ligacao_vendedor" name="metodo_contato" value="0">Ligação telefônica do meu vendedor<br>
+        <input type="radio" id="ligacao_outro" name="metodo_contato" value="0">Ligação telefônica de outra pessoa da concessionária<br>
+        <input type="radio" id="email" name="metodo_contato" value="0">E-mail<br>
+        <input type="radio" id="carta" name="metodo_contato" value="0">Carta<br>
+        <input type="radio" id="sms" name="metodo_contato" value="0">Mensagem de texto (SMS)<br><br>
+
+        <label>Nome da pessoa que contactou:</label><br>
+        <input type="text" name="nome_contato"><br><br>
+
+        <h2>Notas da Experência</h2>
+        <label>Nota para o esforço do vendedor em demonstrar todos os recursos do veículo e benefícios:</label><br>
+        <input type="range" name="esforco_vendedor" min="1" max="10" value="5" step="1">
+        <span id="esforco_vendedor_value">10</span><br><br>
+
+        <label>Nota para o conhecimento do vendedor no produto:</label><br>
+        <input type="range" name="conhecimento_vendedor" min="1" max="10" value="5" step="1">
+        <span id="conhecimento_vendedor_value">10</span><br><br>
+
+        <label>Nota a respeito da cordialidade do vendedor (cortesia, educação, sorriso, etc):</label><br>
+        <input type="range" name="cordialidade_vendedor" min="1" max="10" value="5" step="1">
+        <span id="cordialidade_vendedor_value">10</span><br><br>
+
+        <label>Nota para a comunicação do vendedor:</label><br>
+        <input type="range" name="comunicacao_vendedor" min="1" max="10" value="5" step="1">
+        <span id="comunicacao_vendedor_value">10</span><br><br>
+
+        <label>Notas para a experiência no geral:</label><br>
+        <input type="range" name="experiencia_geral" min="1" max="10" value="5" step="1">
+        <span id="experiencia_geral_value">10</span><br><br>
+
+        <label>Qual a probabilidade de recomendar esta concessionária?</label><br>
+        <input type="radio" id="recomendar_nao" name="recomendacao" value="0">Com certeza não<br>
+        <input type="radio" id="recomendar_prob_nao" name="recomendacao" value="0">Provavelmente não<br>
+        <input type="radio" id="recomendar_prob_sim" name="recomendacao" value="1">Provavelmente sim<br>
+        <input type="radio" id="recomendar_sim" name="recomendacao" value="2">Com certeza sim<br><br>
+
+        <label>Comentários gerais/adicionais sobre o desempenho da concessionária:</label><br>
+        <textarea name="comentarios_gerais" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Enviar Avaliação">
+    </form>
+  </body>
+</html>
